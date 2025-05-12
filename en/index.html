@@ -7,6 +7,15 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script>
+    if (!localStorage.getItem('visitedMP')) {
+      fetch('https://vercel-visit-counter.vercel.app/visit')
+        .then(res => res.json())
+        .then(data => {
+          localStorage.setItem('visitedMP', '1');
+        });
+    }
+  </script>
 </head>
 <body>
 
